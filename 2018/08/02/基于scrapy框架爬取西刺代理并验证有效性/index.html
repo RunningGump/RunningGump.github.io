@@ -117,7 +117,7 @@
 <meta property="og:description" content="前言在爬取网站数据的时候，一些网站会对用户的访问频率进行限制，如果爬取过快会被封ip，而使用代理可防止被封禁。本项目使用scrapy框架对西刺网站进行爬取，并验证爬取代理的有效性，最终将有效的代理输出并存储到json文件中。 Github地址: https://github.com/RunningGump/crawl_xiciproxy 依赖 python3.6 Scrapy 1.5.0  创建项">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/08/02/基于scrapy框架爬取西刺代理并验证有效性/xici1.png">
-<meta property="og:updated_time" content="2018-08-05T06:51:07.725Z">
+<meta property="og:updated_time" content="2018-08-10T02:03:48.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于scrapy框架爬取西刺代理并验证有效性">
 <meta name="twitter:description" content="前言在爬取网站数据的时候，一些网站会对用户的访问频率进行限制，如果爬取过快会被封ip，而使用代理可防止被封禁。本项目使用scrapy框架对西刺网站进行爬取，并验证爬取代理的有效性，最终将有效的代理输出并存储到json文件中。 Github地址: https://github.com/RunningGump/crawl_xiciproxy 依赖 python3.6 Scrapy 1.5.0  创建项">
@@ -368,7 +368,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-05 14:51:07" itemprop="dateModified" datetime="2018-08-05T14:51:07+08:00">2018-08-05</time>
+                <time title="Modified: 2018-08-10 10:03:48" itemprop="dateModified" datetime="2018-08-10T10:03:48+08:00">2018-08-10</time>
               
             
           </span>
@@ -469,6 +469,9 @@
 <h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>使用方法就是在命令行中执行以下命令即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ scrapy crawl xici -o out.json -a num_pages=10 -a typ=nn</span><br></pre></td></tr></table></figure>
 <p>其中<code>out.json</code>是最终输出有效代理的json文件，<code>num_pages</code>是爬取页数，<code>typ</code>表示要爬取的代理类型，<code>nn</code>是高匿代理，<code>nt</code>是普通代理。</p>
+<blockquote>
+<p><strong>提示</strong> ：程序在验证代理有效性的过程中，对于无效的代理会抛出超时异常，不要管这些异常，让程序继续执行直到结束。</p>
+</blockquote>
 
       
     </div>
