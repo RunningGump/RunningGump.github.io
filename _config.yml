@@ -87,4 +87,4 @@ theme: next
 deploy:
   type: git
   repository: git@github.com:RunningGump/RunningGump.github.io.git
-  branch: master
+  branch: hexo
