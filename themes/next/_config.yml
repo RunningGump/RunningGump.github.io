@@ -481,7 +481,7 @@ pangu: false
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: runninggump
   count: true
   lazyload: false
@@ -500,13 +500,13 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false
+  enable: true
   appid:  hKX77J9WvoWl9k8PpSILsgkR-gzGzoHsz
-  appkey:  Sxbtafzp7SeXYiz16AxmRnDs
+  appkey: Sxbtafzp7SeXYiz16AxmRnDs
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
-  avatar: mm # gravatar style
+  avatar: monsterid #mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
 
@@ -960,16 +960,8 @@ vendors:
 
   # valine comment
   # Example: https://cdn.jsdelivr.net/npm/valine@1.1.8/dist/Valine.min.js
-  valine:
-    enable: false
-    appid:  hKX77J9WvoWl9k8PpSILsgkR-gzGzoHsz
-    appkey: Sxbtafzp7SeXYiz16AxmRnDs
-    notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-    verify: false # Verification code
-    placeholder: Just so so # comment box placeholder
-    avatar: monsterid # gravatar style
-    guest_info: nick,mail,link # custom comment header
-    pageSize: 10 # pagination size
+  #valine:
+   # enable: 
 
 # Assets
 css: css
