@@ -430,9 +430,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/09/01/基于Scrapy框架的CrawlSpider类爬取当当全网商品信息/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/09/01/基于Scrapy框架的CrawlSpider类爬取当当全网商品信息/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/01/基于Scrapy框架的CrawlSpider类爬取当当全网商品信息/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -633,9 +631,7 @@ CrawlSpi
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/08/02/基于scrapy框架爬取西刺代理并验证有效性/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/08/02/基于scrapy框架爬取西刺代理并验证有效性/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/02/基于scrapy框架爬取西刺代理并验证有效性/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -999,14 +995,6 @@ Github地址: https://github.com/RunningG
 
   
 
-  
-    <script id="dsq-count-scr" src="https://runninggump.disqus.com/count.js" async></script>
-  
-
-  
-
-
-
 
 
 	
@@ -1021,10 +1009,38 @@ Github地址: https://github.com/RunningG
 
 
 
+  
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hKX77J9WvoWl9k8PpSILsgkR-gzGzoHsz',
+        appKey: 'Sxbtafzp7SeXYiz16AxmRnDs',
+        placeholder: 'Just go go',
+        avatar:'monsterid',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
