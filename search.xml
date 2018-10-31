@@ -5,11 +5,8 @@
     <url>%2F2018%2F10%2F31%2F%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%2F</url>
     <content type="text"><![CDATA[题目实现10进制数到任意进制(2~9)的转换。 注：此题目来源于计蒜客 思路辗转相除法，除n倒取余。 #实现 123456789101112131415161718192021import java.util.Scanner;public class DecimalConversion &#123; public static void main(String[] args) &#123; Scanner input = new Scanner(System.in); int d = input.nextInt(); // 输入需要转换的十进制数 int k = input.nextInt(); // 输入进行多少进制的转换（2-9） trans(d,k); &#125; public static void trans(int d, int k) &#123; int a[] = new int[1024]; int i; for(i=0;d!=0;i++) &#123; a[i] = d % k; d = d/k; &#125; for(i--;i&gt;=0;i--) &#123; System.out.print(a[i]); &#125; &#125;&#125;]]></content>
       <categories>
-        <category>LeetCode</category>
+        <category>计蒜客</category>
       </categories>
-      <tags>
-        <tag>计蒜客</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo博客迁移到一台新电脑]]></title>
