@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[进制转换]]></title>
+    <url>%2F2018%2F10%2F31%2F%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[题目实现10进制数到任意进制(2~9)的转换。 注：此题目来源于计蒜客 思路辗转相除法，除n倒取余。 #实现 123456789101112131415161718192021import java.util.Scanner;public class DecimalConversion &#123; public static void main(String[] args) &#123; Scanner input = new Scanner(System.in); int d = input.nextInt(); // 输入需要转换的十进制数 int k = input.nextInt(); // 输入进行多少进制的转换（2-9） trans(d,k); &#125; public static void trans(int d, int k) &#123; int a[] = new int[1024]; int i; for(i=0;d!=0;i++) &#123; a[i] = d % k; d = d/k; &#125; for(i--;i&gt;=0;i--) &#123; System.out.print(a[i]); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>计蒜客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo博客迁移到一台新电脑]]></title>
     <url>%2F2018%2F10%2F29%2FHexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%2F</url>
     <content type="text"><![CDATA[前言由于10月份换了一台Macbook Pro，导致自己搭建的Hexo博客一直停滞了。我想人做事一定要善始善终，不要忘记当初搭建Hexo博客的初心。于是乎，就有了这一篇文章。 迁移思路在已经推送到Github上的Hexo静态网页创建一个分支，利用这个分支来管理自己的Hexo环境文件。 迁移步骤1.在旧机器上克隆Github上面生成的静态文件到本地1git clone https://github.com/username/username.github.io.git 2.针对克隆到本地的文件中，将除去.git文件的所有文件都删除3.将旧机器中所有文件(.gitignore文件中包含的文件除外）拷贝到我们克隆下来的文件内4. 创建并切换到一个叫hexo的分支1git checkout -b hexo 5. 提交复制过来的文件到暂存取1git add -A 6.提交1git commit -m "ceate a new branch file" 7.推送到Github1git push --set-upstream origin hexo 这个时候hexo分支已经创建完毕，接下来，我们在新电脑上搭建环境。 8.新电脑配置环境安装node.js，根据自己电脑系统自行百度安装。 安装git，git相关教程推荐廖雪峰老师的git教程。 安装hexo： npm install -g hexo-cli 9.clone远程仓库到本地1git clone -b hexo https://github.com/username/username.github.io.git 10.根据package.json安装依赖1npm install *** --save 将***替换为package.json文件内的依赖包 11.开始写文章我们现在可以通过hexo n &quot;文章标题&quot; 创建一篇文章了！ 12. 提交hexo环境文件git add . git commit -m &quot;some description&quot; git push origin hexo 13.发布文章1hexo g -d 到这里，我们的Hexo博客就迁移完毕了！！以后再写文章时，只需要重复步骤11、12、13就ok啦！！]]></content>
@@ -30,8 +41,8 @@
         <category>python3网络爬虫</category>
       </categories>
       <tags>
-        <tag>西刺代理</tag>
         <tag>爬虫</tag>
+        <tag>西刺代理</tag>
       </tags>
   </entry>
 </search>
