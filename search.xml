@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[排序后的数组删除重复（次数大于2）数字]]></title>
+    <url>%2F2018%2F10%2F31%2F%E6%8E%92%E5%BA%8F%E5%90%8E%E7%9A%84%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%EF%BC%88%E6%AC%A1%E6%95%B0%E5%A4%A7%E4%BA%8E2%EF%BC%89%E6%95%B0%E5%AD%97%2F</url>
+    <content type="text"><![CDATA[题目给定升序排序的数组，如果数组有2个以上相同的数字，去掉他们，直到剩下2个为止。 例如： 数组A[] = [1,1,1,2,2,3] 你的算法需要返回新数组的长度5, 此时A为[1,1,2,2,3] 格式：第一行输入一个数字n，第二行输入A[n], 最后输出新数组的长度。 样例输入 1261 1 1 1 3 3 样例输出 14 思路从第3个数开始遍历到最后 ​ 如果当前位置的数字和其前两个数字都相等，则count减1 代码123456789101112131415161718192021222324package jisuanke;import java.util.Scanner;public class RmDuplicateNum &#123; public static void main(String[] args) &#123; Scanner sc = new Scanner(System.in); int n = sc.nextInt(); // 输入数组长度 int[] A = new int[n]; // 通过for循环输入数组内容 for(int i=0; i&lt;n;i++) &#123; A[i] = sc.nextInt(); &#125; int count = n; for(int i=2; i&lt;n; i++) &#123; if(A[i]==A[i-1] &amp;&amp; A[i]==A[i-2]) &#123; count--; &#125; &#125; System.out.println(count); &#125;&#125;]]></content>
+      <categories>
+        <category>计蒜客</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[进制转换]]></title>
     <url>%2F2018%2F10%2F31%2F%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[题目实现10进制数到任意进制(2~9)的转换。 注：此题目来源于计蒜客 思路辗转相除法，除n倒取余。 #实现 123456789101112131415161718192021import java.util.Scanner;public class DecimalConversion &#123; public static void main(String[] args) &#123; Scanner input = new Scanner(System.in); int d = input.nextInt(); // 输入需要转换的十进制数 int k = input.nextInt(); // 输入进行多少进制的转换（2-9） trans(d,k); &#125; public static void trans(int d, int k) &#123; int a[] = new int[1024]; int i; for(i=0;d!=0;i++) &#123; a[i] = d % k; d = d/k; &#125; for(i--;i&gt;=0;i--) &#123; System.out.print(a[i]); &#125; &#125;&#125;]]></content>
+    <content type="text"><![CDATA[题目实现10进制数到任意进制(2~9)的转换。 注：此题目来源于计蒜客 思路辗转相除法，除n倒取余。 代码1234567891011121314151617181920212223package jisuanke;import java.util.Scanner;public class DecimalConversion &#123; public static void main(String[] args) &#123; Scanner input = new Scanner(System.in); int d = input.nextInt(); // 输入需要转换的十进制数 int k = input.nextInt(); // 输入进行多少进制的转换（2-9） trans(d,k); &#125; public static void trans(int d, int k) &#123; int a[] = new int[1024]; int i; for(i=0;d!=0;i++) &#123; a[i] = d % k; d = d/k; &#125; for(i--;i&gt;=0;i--) &#123; System.out.print(a[i]); &#125; &#125;&#125;]]></content>
       <categories>
         <category>计蒜客</category>
       </categories>
