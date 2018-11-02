@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[925. 长按键入]]></title>
+    <url>%2F2018%2F11%2F02%2F925-%E9%95%BF%E6%8C%89%E9%94%AE%E5%85%A5%2F</url>
+    <content type="text"><![CDATA[题目你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。 你将会检查键盘输入的字符 typed。如果它对应的可能是你的朋友的名字（其中一些字符可能被长按），那么就返回 True。 示例 1： 123输入：name = &quot;alex&quot;, typed = &quot;aaleex&quot;输出：true解释：&apos;alex&apos; 中的 &apos;a&apos; 和 &apos;e&apos; 被长按。 示例 2： 123输入：name = &quot;saeed&quot;, typed = &quot;ssaaedd&quot;输出：false解释：&apos;e&apos; 一定需要被键入两次，但在 typed 的输出中不是这样。 示例 3： 12输入：name = &quot;leelee&quot;, typed = &quot;lleeelee&quot;输出：true 示例 4： 123输入：name = &quot;laiden&quot;, typed = &quot;laiden&quot;输出：true解释：长按名字中的字符并不是必要的。 提示： name.length &lt;= 1000 typed.length &lt;= 1000 name 和 typed 的字符都是小写字母。 思路使用两个指针解决这个问题。 1234a l e xia a l e e xj 若i&lt;name.length() 且name.charAt(i)==typed.charAt(j),则i++;j++。1234a l e xia a l e e xj 若j==0 或 typed.charAt(j)!= typed.charAt(j-1)，则返回false。 1234a l e xia a l e e xj 1234a l e xia a l e e xj ….. ….. 1234a l e xia a l e e xj 注意：&amp;&amp;的运算符，运算顺序从左至右。若&amp;&amp;左边的表达式为false，则不进行&amp;&amp;后面的运算，这个逻辑表达式返回false。 代码12345678910111213141516class Solution &#123;public boolean isLongPressedName(String name, String typed) &#123;int i = 0;int typed_len = typed.length();for(int j=0; j&lt;typed_len; j++)&#123;if(i&lt;name.length() &amp;&amp; name.charAt(i)==typed.charAt(j))&#123;i++;&#125;else&#123;if(j==0 || typed.charAt(j)!= typed.charAt(j-1))return false;&#125;&#125;return i==name.length();&#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[268. 缺失数字]]></title>
+    <url>%2F2018%2F11%2F02%2F268-%E7%BC%BA%E5%A4%B1%E6%95%B0%E5%AD%97%2F</url>
+    <content type="text"><![CDATA[题目给定一个包含 0, 1, 2, ..., n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。 示例 1: 12输入: [3,0,1]输出: 2 示例 2: 12输入: [9,6,4,2,3,5,7,0,1]输出: 8 说明:你的算法应具有线性时间复杂度。你能否仅使用额外常数空间来实现? 思路认真审题；如果使用先排序在二分查找的策略，时间复杂度上明显会大于O(n)。在这里将其看作一道数学题解答就好了。根据序列长度n，可以求出不缺失数字时的和。数字缺失之后的和通过遍历一遍数组得到。最后二者相减就是要找的缺失数字。 代码12345678910class Solution &#123;public int missingNumber(int[] nums) &#123;int n = nums.length;int sum = 0;for(int i=0; i&lt;n; i++)&#123;sum += nums[i];&#125;return n*(n+1)/2 - sum; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[排序后的数组删除重复（次数大于2）数字]]></title>
     <url>%2F2018%2F10%2F31%2F%E6%8E%92%E5%BA%8F%E5%90%8E%E7%9A%84%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%EF%BC%88%E6%AC%A1%E6%95%B0%E5%A4%A7%E4%BA%8E2%EF%BC%89%E6%95%B0%E5%AD%97%2F</url>
     <content type="text"><![CDATA[题目给定升序排序的数组，如果数组有2个以上相同的数字，去掉他们，直到剩下2个为止。 例如： 数组A[] = [1,1,1,2,2,3] 你的算法需要返回新数组的长度5, 此时A为[1,1,2,2,3] 格式：第一行输入一个数字n，第二行输入A[n], 最后输出新数组的长度。 样例输入 1261 1 1 1 3 3 样例输出 14 思路从第3个数开始遍历到最后 ​ 如果当前位置的数字和其前两个数字都相等，则count减1 代码123456789101112131415161718192021222324package jisuanke;import java.util.Scanner;public class RmDuplicateNum &#123; public static void main(String[] args) &#123; Scanner sc = new Scanner(System.in); int n = sc.nextInt(); // 输入数组长度 int[] A = new int[n]; // 通过for循环输入数组内容 for(int i=0; i&lt;n;i++) &#123; A[i] = sc.nextInt(); &#125; int count = n; for(int i=2; i&lt;n; i++) &#123; if(A[i]==A[i-1] &amp;&amp; A[i]==A[i-2]) &#123; count--; &#125; &#125; System.out.println(count); &#125;&#125;]]></content>
