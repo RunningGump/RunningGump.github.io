@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title>1. Two Sum</title>
+      <link href="/2018/11/06/1-Two-Sum/"/>
+      <url>/2018/11/06/1-Two-Sum/</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>两数之和</strong></p><p>给定一个整数数组和一个目标值，找出数组中和为目标值的<strong>两个</strong>数。</p><p>你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。</p><p><strong>示例:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [2, 7, 11, 15], target = 9</span><br><span class="line"></span><br><span class="line">因为 nums[0] + nums[1] = 2 + 7 = 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure><h1 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h1><p>遍历整个列表</p><p>​    如果（target-当前值）在这个列表内</p><p>​        返回 当前值的索引，（target-当前值）的索引</p><p>这个思路容易想到，但是时间复杂度较高。</p><h1 id="代码一"><a href="#代码一" class="headerlink" title="代码一"></a>代码一</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> target-nums[i] <span class="keyword">in</span> nums[i+<span class="number">1</span>:]:</span><br><span class="line">                <span class="keyword">return</span> i, nums.index(target-nums[i], i+<span class="number">1</span>)</span><br></pre></td></tr></table></figure><h1 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h1><p>借助一个字典来存储：key为<strong>当前值</strong>，value为<strong>当前值的索引</strong></p><h2 id="代码二"><a href="#代码二" class="headerlink" title="代码二"></a>代码二</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            another = target - nums[i]</span><br><span class="line">            <span class="keyword">if</span> another <span class="keyword">in</span> d.keys():</span><br><span class="line">                <span class="keyword">return</span> d[another], i</span><br><span class="line">            d[nums[i]] = i</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>717. 1-bit and 2-bit Characters</title>
+      <link href="/2018/11/06/717-1-bit%20and%202-bit%20Characters/"/>
+      <url>/2018/11/06/717-1-bit%20and%202-bit%20Characters/</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>1比特与2比特字符</strong></p><p>有两种特殊字符。第一种字符可以用一比特<code>0</code>来表示。第二种字符可以用两比特(<code>10</code> 或 <code>11</code>)来表示。</p><p>现给一个由若干比特组成的字符串。问最后一个字符是否必定为一个一比特字符。给定的字符串总是由0结束。</p><p><strong>示例 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">bits = [1, 0, 0]</span><br><span class="line">输出: True</span><br><span class="line">解释: </span><br><span class="line">唯一的编码方式是一个两比特字符和一个一比特字符。所以最后一个字符是一比特字符。</span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">bits = [1, 1, 1, 0]</span><br><span class="line">输出: False</span><br><span class="line">解释: </span><br><span class="line">唯一的编码方式是两比特字符和两比特字符。所以最后一个字符不是一比特字符。</span><br></pre></td></tr></table></figure><p><strong>注意:</strong></p><ul><li><code>1 &lt;= len(bits) &lt;= 1000</code>.</li><li><code>bits[i]</code> 总是<code>0</code> 或 <code>1</code>.</li></ul><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>当前索引值小于列表长度的时候：</p><p>​    如果当前值为列表最后一个，则返回True</p><p>​    另外，如果当前值为0，则当前位置+1</p><p>​    否则，当前位置+2</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isOneBitCharacter</span><span class="params">(self, bits)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type bits: List[int]</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        length = len(bits)</span><br><span class="line">        c = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(c&lt;length):</span><br><span class="line">            <span class="keyword">if</span> c == length <span class="number">-1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">            <span class="keyword">elif</span> bits[c] == <span class="number">0</span>:</span><br><span class="line">                c += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                c += <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>824. Goat Latin</title>
       <link href="/2018/11/05/824-Goat-Latin/"/>
       <url>/2018/11/05/824-Goat-Latin/</url>
@@ -167,9 +201,9 @@
       
         <tags>
             
-            <tag> 西刺代理 </tag>
-            
             <tag> 爬虫 </tag>
+            
+            <tag> 西刺代理 </tag>
             
         </tags>
       
