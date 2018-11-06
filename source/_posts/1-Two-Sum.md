@@ -1,7 +1,7 @@
 ---
 title: 1. Two Sum
-date: 2018-11-06 19:07:35
-category:LeetCode
+date: 2018-11-06 20:21:08
+category: LeetCode
 ---
 
 # 题目
@@ -67,4 +67,3 @@ class Solution:
                 return d[another], i
             d[nums[i]] = i
 ```
-

@@ -1,7 +1,7 @@
 ---
 title: 717. 1-bit and 2-bit Characters
 date: 2018-11-06 19:35:35
-category：LeetCode
+category: LeetCode 
 ---
 
 # 题目
