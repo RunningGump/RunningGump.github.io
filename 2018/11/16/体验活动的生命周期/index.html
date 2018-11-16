@@ -108,24 +108,41 @@
 
 
 
-  <meta name="description" content="题目两数之和 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。 你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。 示例: 1234给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1] 思路一遍历整个列表 ​    如果（target-当前值）在这个列表内 ​">
+  <meta name="description" content="在动手实现这小实验之前，最好先去了解活动生命周期的4种状态以及Activity类中定义的7个回调方法。 新建一个项目 新建一个名为ActivityLifeCycleTest的项目，点击Next。    保持默认选项，再点击Next。    选择一个空项目，让Android帮我们自动创建活动和布局。    活动名和布局名都是用默认值。   到此为止，我们的主活动就创建完毕了。 创建两个子活动">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1. Two Sum">
-<meta property="og:url" content="http://yoursite.com/2018/11/06/1-Two-Sum/index.html">
+<meta property="og:title" content="体验活动的生命周期">
+<meta property="og:url" content="http://yoursite.com/2018/11/16/体验活动的生命周期/index.html">
 <meta property="og:site_name" content="初心">
-<meta property="og:description" content="题目两数之和 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。 你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。 示例: 1234给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1] 思路一遍历整个列表 ​    如果（target-当前值）在这个列表内 ​">
+<meta property="og:description" content="在动手实现这小实验之前，最好先去了解活动生命周期的4种状态以及Activity类中定义的7个回调方法。 新建一个项目 新建一个名为ActivityLifeCycleTest的项目，点击Next。    保持默认选项，再点击Next。    选择一个空项目，让Android帮我们自动创建活动和布局。    活动名和布局名都是用默认值。   到此为止，我们的主活动就创建完毕了。 创建两个子活动">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T12:23:17.031Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116085352727.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116085453492.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116085840469.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116090722988.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116091658116.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116091844066.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116092419983.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116105015976.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116105139134.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116105613231.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116105804164.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116110125194.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116120841989.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116120948371.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116121404897.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116121609853.png">
+<meta property="og:updated_time" content="2018-11-16T04:48:19.173Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1. Two Sum">
-<meta name="twitter:description" content="题目两数之和 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。 你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。 示例: 1234给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1] 思路一遍历整个列表 ​    如果（target-当前值）在这个列表内 ​">
+<meta name="twitter:title" content="体验活动的生命周期">
+<meta name="twitter:description" content="在动手实现这小实验之前，最好先去了解活动生命周期的4种状态以及Activity类中定义的7个回调方法。 新建一个项目 新建一个名为ActivityLifeCycleTest的项目，点击Next。    保持默认选项，再点击Next。    选择一个空项目，让Android帮我们自动创建活动和布局。    活动名和布局名都是用默认值。   到此为止，我们的主活动就创建完毕了。 创建两个子活动">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/16/体验活动的生命周期/image-20181116085352727.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/06/1-Two-Sum/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/16/体验活动的生命周期/"/>
 
 
 
@@ -135,7 +152,7 @@
   };
 </script>
 
-  <title>1. Two Sum | 初心</title>
+  <title>体验活动的生命周期 | 初心</title>
   
 
 
@@ -337,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/1-Two-Sum/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/16/体验活动的生命周期/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Geng Zehao">
@@ -354,7 +371,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">1. Two Sum
+          <h1 class="post-title" itemprop="name headline">体验活动的生命周期
               
             
           </h1>
@@ -379,7 +396,7 @@
                 
               
 
-              <time title="Created: 2018-11-06 20:21:08 / Modified: 20:23:17" itemprop="dateCreated datePublished" datetime="2018-11-06T20:21:08+08:00">2018-11-06</time>
+              <time title="Created: 2018-11-16 12:32:22 / Modified: 12:48:19" itemprop="dateCreated datePublished" datetime="2018-11-16T12:32:22+08:00">2018-11-16</time>
             
 
             
@@ -401,7 +418,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
 
                 
                 
@@ -416,8 +433,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/06/1-Two-Sum/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/06/1-Two-Sum/" itemprop="commentCount"></span>
+                <a href="/2018/11/16/体验活动的生命周期/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/16/体验活动的生命周期/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -425,7 +442,7 @@
 
           
           
-             <span id="/2018/11/06/1-Two-Sum/" class="leancloud_visitors" data-flag-title="1. Two Sum">
+             <span id="/2018/11/16/体验活动的生命周期/" class="leancloud_visitors" data-flag-title="体验活动的生命周期">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -456,18 +473,93 @@
       
 
       
-        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>两数之和</strong></p>
-<p>给定一个整数数组和一个目标值，找出数组中和为目标值的<strong>两个</strong>数。</p>
-<p>你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [2, 7, 11, 15], target = 9</span><br><span class="line"></span><br><span class="line">因为 nums[0] + nums[1] = 2 + 7 = 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
-<h1 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h1><p>遍历整个列表</p>
-<p>​    如果（target-当前值）在这个列表内</p>
-<p>​        返回 当前值的索引，（target-当前值）的索引</p>
-<p>这个思路容易想到，但是时间复杂度较高。</p>
-<h1 id="代码一"><a href="#代码一" class="headerlink" title="代码一"></a>代码一</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> target-nums[i] <span class="keyword">in</span> nums[i+<span class="number">1</span>:]:</span><br><span class="line">                <span class="keyword">return</span> i, nums.index(target-nums[i], i+<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h1><p>借助一个字典来存储：key为<strong>当前值</strong>，value为<strong>当前值的索引</strong></p>
-<h2 id="代码二"><a href="#代码二" class="headerlink" title="代码二"></a>代码二</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            another = target - nums[i]</span><br><span class="line">            <span class="keyword">if</span> another <span class="keyword">in</span> d.keys():</span><br><span class="line">                <span class="keyword">return</span> d[another], i</span><br><span class="line">            d[nums[i]] = i</span><br></pre></td></tr></table></figure>
+        <p>在动手实现这小实验之前，最好先去了解活动生命周期的4种状态以及Activity类中定义的7个回调方法。</p>
+<h2 id="新建一个项目"><a href="#新建一个项目" class="headerlink" title="新建一个项目"></a>新建一个项目</h2><ol>
+<li>新建一个名为ActivityLifeCycleTest的项目，点击Next。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116085352727.png" alt="image-20181116085352727"></p>
+<ol start="2">
+<li>保持默认选项，再点击Next。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116085453492.png" alt="image-20181116085453492"></p>
+<ol start="3">
+<li>选择一个空项目，让Android帮我们自动创建活动和布局。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116085840469.png" alt="image-20181116085840469"></p>
+<ol start="4">
+<li>活动名和布局名都是用默认值。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116090722988.png" alt="image-20181116090722988"></p>
+<p>到此为止，我们的主活动就创建完毕了。</p>
+<h2 id="创建两个子活动"><a href="#创建两个子活动" class="headerlink" title="创建两个子活动"></a>创建两个子活动</h2><p>创建两个子活动，分别名为NormalActivity和DialogActivity。</p>
+<ol>
+<li>新建NormalActivity子活动。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116091658116.png" alt="image-20181116091658116"></p>
+<p>布局起名为activity_normal，点击Finish。</p>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116091844066.png" alt="image-20181116091844066"></p>
+<ol start="2">
+<li>新建DialogActivity子活动，布局起名为activity_dialog，创建方法同上。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116092419983.png" alt="image-20181116092419983"></p>
+<p>到此，两个子活动创建完毕。</p>
+<h2 id="编写活动的布局文件"><a href="#编写活动的布局文件" class="headerlink" title="编写活动的布局文件"></a>编写活动的布局文件</h2><ol>
+<li>编写activity_normal.xml文件，将里面的代码替换成如下内容：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"This is a normal activity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这个布局中我们使用了一个TextView，用于显示一行文字。</p>
+<ol start="2">
+<li>编辑activity_dialog.xml文件，将里面的内容代码替换成如下内容：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"This is a dialog activity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>修改AndroidManifest.xml文件的<code>&lt;activity&gt;</code>标签的配置，将DialogActivity活动指定为对话框式的主题。</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MainActivity"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".NormalActivit"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".DialogActivity"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:theme</span>=<span class="string">"@style/Theme.AppCompat.Dialog"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>修改activity_main.xml文件，重新定制主活动的布局，替换为如下内容：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:id</span>=<span class="string">"@+id/start_normal_activity"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"Start NormalActivity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:id</span>=<span class="string">"@+id/start_dialog_activity"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"Start DialogActivity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们在LineaLayout中加入了两个按钮，一个用于启动NormalActivity，一个用于启动DialogActivity。</p>
+<h2 id="修改MainActivity"><a href="#修改MainActivity" class="headerlink" title="修改MainActivity"></a>修改MainActivity</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.edu.pku.gengzehao.activitylifecycletest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.content.Intent;</span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.util.Log;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = <span class="string">"MainActivity"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line"><span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">Log.d(TAG, <span class="string">"onCreate"</span>);</span><br><span class="line">setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">Button startNormalActivity = (Button) findViewById(R.id.start_normal_activity);</span><br><span class="line">startNormalActivity.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">Button startDialogActivity = (Button) findViewById(R.id.start_dialog_activity);</span><br><span class="line">startDialogActivity.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (v.getId() == R.id.start_normal_activity)&#123;</span><br><span class="line">Intent intent = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>, NormalActivit.class);</span><br><span class="line">startActivity(intent);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (v.getId() == R.id.start_dialog_activity)&#123;</span><br><span class="line">Intent intent = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>, DialogActivity.class);</span><br><span class="line">startActivity(intent);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStart</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">super</span>.onStart();</span><br><span class="line">Log.d(TAG, <span class="string">"onStart"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">super</span>.onResume();</span><br><span class="line">Log.d(TAG, <span class="string">"onResume"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">super</span>.onPause();</span><br><span class="line">Log.d(TAG, <span class="string">"onPause"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">super</span>.onStop();</span><br><span class="line">Log.d(TAG, <span class="string">"onStop"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">super</span>.onDestroy();</span><br><span class="line">Log.d(TAG, <span class="string">"onDestroy"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onRestart</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">super</span>.onRestart();</span><br><span class="line">Log.d(TAG, <span class="string">"onRestart"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再onCreate方法中，我们我们分别为两个按钮注册了点击事件，点击第一个按钮会启动NoramalActivity。点击第二个按钮会启动DialogActivity。然后再Activity的7个回调方法中分别打印了回调方法的名字，这样就可以通过观察日志的方式来更直观的理解活动的生命周期。</p>
+<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><ol>
+<li>启动程序：</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116105015976.png" alt="image-20181116105015976"></p>
+<p>启动程序时，logcat中的日志信息如下图，可以看到当MainActivity第一被创建时会一次执行onCreate()、onStart()、onResume()方法。</p>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116105139134.png" alt="image-20181116105139134"></p>
+<ol start="2">
+<li>点击一个按钮，启动NormalActivity。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116105613231.png" alt="image-20181116105613231"></p>
+<p>打开NormalActivity时的打印日志：</p>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116105804164.png" alt="image-20181116105804164"></p>
+<p>由于NormalActivity已经把MainActivity完全遮挡，因此onPause()和onStop()方法都会得到执行。</p>
+<ol start="3">
+<li>按下Back键返回MainActivity的打印日志信息如下。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116110125194.png" alt="image-20181116110125194"></p>
+<p>由于之前的MainActivity已经进入了停止状态，所以onRestart() 方法才会的到执行，之后又会依次执行onSrart()  和onResume()方法。值的注意的是，此时onCreate()方法不会执行。</p>
+<ol start="4">
+<li>再点击第二个按钮，启动DialogActivity。</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116120841989.png" alt="image-20181116120841989"></p>
+<p>打开DialogActivity时的打印日志：</p>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116120948371.png" alt="image-20181116120948371"></p>
+<p>只有onPause()方法得到了执行，onStop()方法并没有执行。这是因为DialogActivity并没有完全遮挡住MainActivity，此时MainActivity只是进入了暂停状态，并没有进入停止状态。</p>
+<ol start="5">
+<li>按下Back键再次返回MainActivity时的打印日志为：</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116121404897.png" alt="image-20181116121404897"></p>
+<p>可以看到，只有onResume ()方法得到了执行。</p>
+<ol start="6">
+<li>最后，在MainActivity按下Back键退出程序，打印日志如下：</li>
+</ol>
+<p><img src="/2018/11/16/体验活动的生命周期/image-20181116121609853.png" alt="image-20181116121609853"></p>
+<p>依次会执行onPause()、onStop()、 onDestroy()方法，最终销毁MainActivity。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>《第一行代码 Android》郭霖  </p>
+
       
     </div>
 
@@ -506,8 +598,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/06/717-1-bit and 2-bit Characters/" rel="next" title="717. 1-bit and 2-bit Characters">
-                <i class="fa fa-chevron-left"></i> 717. 1-bit and 2-bit Characters
+              <a href="/2018/11/07/258-Add-Digits/" rel="next" title="258. Add Digits">
+                <i class="fa fa-chevron-left"></i> 258. Add Digits
               </a>
             
           </div>
@@ -515,10 +607,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/07/258-Add-Digits/" rel="prev" title="258. Add Digits">
-                258. Add Digits <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -677,7 +765,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路一"><span class="nav-number">2.</span> <span class="nav-text">思路一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码一"><span class="nav-number">3.</span> <span class="nav-text">代码一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路二"><span class="nav-number">4.</span> <span class="nav-text">思路二</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码二"><span class="nav-number">4.1.</span> <span class="nav-text">代码二</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建一个项目"><span class="nav-number">1.</span> <span class="nav-text">新建一个项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建两个子活动"><span class="nav-number">2.</span> <span class="nav-text">创建两个子活动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写活动的布局文件"><span class="nav-number">3.</span> <span class="nav-text">编写活动的布局文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改MainActivity"><span class="nav-number">4.</span> <span class="nav-text">修改MainActivity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行程序"><span class="nav-number">5.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
