@@ -2,8 +2,9 @@
 title: 成功解决在hexo中无法显示数学公式的问题
 date: 2018-12-05 00:34:32
 category: Hexo
-tags: - hexo
-      - mathjax
+tags: 
+- hexo
+- mathjax
 ---
 
 # 前言
