@@ -21,7 +21,7 @@ tags:
 
 # 解决步骤
 
-## 1更换Hexo的markdown渲染引擎
+## 更换Hexo的markdown渲染引擎
 
 先后执行下面的两条命令，第一条表示将默认的渲染引擎hexo-renderer-marked卸载，第二条命令是安装hexo-renderer-kramed渲染引擎，此渲染引擎修改了hexo-renderer-marked渲染引擎的一些bug。
 
@@ -30,7 +30,7 @@ npm uninstall hexo-renderer-marked --save
 npm install hexo-renderer-kramed --save
 ```
 
-## 2修改node_modules\kramed\lib\rules\inline.js文件
+## 修改node_modules\kramed\lib\rules\inline.js文件
 
 hexo-renderer-marked渲染引擎仍然存在一些语义冲突问题，到博客的根目录下，找到node_modules\kramed\lib\rules\inline.js，把第11行的escape变量的值做相应的修改：
 
@@ -48,7 +48,7 @@ hexo-renderer-marked渲染引擎仍然存在一些语义冲突问题，到博客
   em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 ```
 
-## 3在主题中开启mathjax开关
+## 在主题中开启mathjax开关
 
 到博客根目录下，找到themes/next/_config.yml，把math默认的flase修改为true，具体如下：
 
@@ -60,7 +60,7 @@ math:
   engine: mathjax
 ```
 
-## 4在文章的Front-matter里打开mathjax开关
+## 在文章的Front-matter里打开mathjax开关
 
 如果你写的文章里面用到了数学公式，需要在文章Front-matter里打开mathjax开关。如果用不到数学公式，则不需要管它。
 
@@ -73,7 +73,7 @@ mathjax: true
 --
 ```
 
-## 5重启hexo
+## 重启hexo
 
 ```shell
 hexo clean #清除缓存文件
