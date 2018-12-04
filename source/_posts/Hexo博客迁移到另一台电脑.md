@@ -1,7 +1,7 @@
 ---
 title: Hexo博客迁移到一台新电脑
 date: 2018-10-29 20:39:42
-categories: “Hexo”
+categories: Hexo
 tags: 
   - Hexo迁移
 ---
