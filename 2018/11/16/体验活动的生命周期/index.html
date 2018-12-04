@@ -357,7 +357,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/16/体验活动的生命周期/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Geng Zehao">
+      <meta itemprop="name" content="Zehao Geng">
       <meta itemprop="description" content="Stay hungry, Stay foolish.">
       <meta itemprop="image" content="/images/header.jpeg">
     </span>
@@ -478,15 +478,15 @@
 <li>新建一个名为ActivityLifeCycleTest的项目，点击Next。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116085352727.png" alt="image-20181116085352727"></p>
-<ol start="2">
+<ol>
 <li>保持默认选项，再点击Next。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116085453492.png" alt="image-20181116085453492"></p>
-<ol start="3">
+<ol>
 <li>选择一个空项目，让Android帮我们自动创建活动和布局。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116085840469.png" alt="image-20181116085840469"></p>
-<ol start="4">
+<ol>
 <li>活动名和布局名都是用默认值。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116090722988.png" alt="image-20181116090722988"></p>
@@ -498,7 +498,7 @@
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116091658116.png" alt="image-20181116091658116"></p>
 <p>布局起名为activity_normal，点击Finish。</p>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116091844066.png" alt="image-20181116091844066"></p>
-<ol start="2">
+<ol>
 <li>新建DialogActivity子活动，布局起名为activity_dialog，创建方法同上。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116092419983.png" alt="image-20181116092419983"></p>
@@ -508,15 +508,15 @@
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"This is a normal activity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>这个布局中我们使用了一个TextView，用于显示一行文字。</p>
-<ol start="2">
+<ol>
 <li>编辑activity_dialog.xml文件，将里面的内容代码替换成如下内容：</li>
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"This is a dialog activity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
+<ol>
 <li>修改AndroidManifest.xml文件的<code>&lt;activity&gt;</code>标签的配置，将DialogActivity活动指定为对话框式的主题。</li>
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MainActivity"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".NormalActivit"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".DialogActivity"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:theme</span>=<span class="string">"@style/Theme.AppCompat.Dialog"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ol start="4">
+<ol>
 <li>修改activity_main.xml文件，重新定制主活动的布局，替换为如下内容：</li>
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:id</span>=<span class="string">"@+id/start_normal_activity"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"Start NormalActivity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:id</span>=<span class="string">"@+id/start_dialog_activity"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag"><span class="attr">android:text</span>=<span class="string">"Start DialogActivity"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -529,31 +529,31 @@
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116105015976.png" alt="image-20181116105015976"></p>
 <p>启动程序时，logcat中的日志信息如下图，可以看到当MainActivity第一被创建时会一次执行onCreate()、onStart()、onResume()方法。</p>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116105139134.png" alt="image-20181116105139134"></p>
-<ol start="2">
+<ol>
 <li>点击一个按钮，启动NormalActivity。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116105613231.png" alt="image-20181116105613231"></p>
 <p>打开NormalActivity时的打印日志：</p>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116105804164.png" alt="image-20181116105804164"></p>
 <p>由于NormalActivity已经把MainActivity完全遮挡，因此onPause()和onStop()方法都会得到执行。</p>
-<ol start="3">
+<ol>
 <li>按下Back键返回MainActivity的打印日志信息如下。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116110125194.png" alt="image-20181116110125194"></p>
 <p>由于之前的MainActivity已经进入了停止状态，所以onRestart() 方法才会的到执行，之后又会依次执行onSrart()  和onResume()方法。值的注意的是，此时onCreate()方法不会执行。</p>
-<ol start="4">
+<ol>
 <li>再点击第二个按钮，启动DialogActivity。</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116120841989.png" alt="image-20181116120841989"></p>
 <p>打开DialogActivity时的打印日志：</p>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116120948371.png" alt="image-20181116120948371"></p>
 <p>只有onPause()方法得到了执行，onStop()方法并没有执行。这是因为DialogActivity并没有完全遮挡住MainActivity，此时MainActivity只是进入了暂停状态，并没有进入停止状态。</p>
-<ol start="5">
+<ol>
 <li>按下Back键再次返回MainActivity时的打印日志为：</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116121404897.png" alt="image-20181116121404897"></p>
 <p>可以看到，只有onResume ()方法得到了执行。</p>
-<ol start="6">
+<ol>
 <li>最后，在MainActivity按下Back键退出程序，打印日志如下：</li>
 </ol>
 <p><img src="/2018/11/16/体验活动的生命周期/image-20181116121609853.png" alt="image-20181116121609853"></p>
@@ -678,9 +678,9 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/header.jpeg"
-                alt="Geng Zehao" />
+                alt="Zehao Geng" />
             
-              <p class="site-author-name" itemprop="name">Geng Zehao</p>
+              <p class="site-author-name" itemprop="name">Zehao Geng</p>
               <p class="site-description motion-element" itemprop="description">Stay hungry, Stay foolish.</p>
           </div>
 
@@ -797,7 +797,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Geng Zehao</span>
+  <span class="author" itemprop="copyrightHolder">Zehao Geng</span>
 
   
 
@@ -1439,6 +1439,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
   
