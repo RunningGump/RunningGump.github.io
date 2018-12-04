@@ -127,6 +127,9 @@ menu:
   #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons / item badges.
+menu_icons:
+  enable: true
+
 menu_settings:
   icons: true
   badges: false
