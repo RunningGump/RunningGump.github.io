@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>成功解决在hexo中无法显示数学公式的问题</title>
+      <link href="/2018/12/05/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E5%9C%A8hexo%E4%B8%AD%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2018/12/05/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E5%9C%A8hexo%E4%B8%AD%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>基于Hexo搭建的个人博客，在默认情况下渲染数学公式的时候是会出现问题的。下面的截图是我的先前的博客中出现的公式渲染错误：</p><p><img src="/2018/12/05/成功解决在hexo中无法显示数学公式的问题/before.jpg" alt="问题截图"></p><p>经过了一波百度操作后，成功将问题解决，下面是解决后的截图：</p><p><img src="/2018/12/05/成功解决在hexo中无法显示数学公式的问题/after.jpg" alt="问题截图"></p><p>下面我将我的操作写在下面，供需要的人参考。</p><h1 id="解决步骤"><a href="#解决步骤" class="headerlink" title="解决步骤"></a>解决步骤</h1><h2 id="1更换Hexo的markdown渲染引擎"><a href="#1更换Hexo的markdown渲染引擎" class="headerlink" title="1更换Hexo的markdown渲染引擎"></a>1更换Hexo的markdown渲染引擎</h2><p>先后执行下面的两条命令，第一条表示将默认的渲染引擎hexo-renderer-marked卸载，第二条命令是安装hexo-renderer-kramed渲染引擎，此渲染引擎修改了hexo-renderer-marked渲染引擎的一些bug。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure><h2 id="2修改node-modules-kramed-lib-rules-inline-js文件"><a href="#2修改node-modules-kramed-lib-rules-inline-js文件" class="headerlink" title="2修改node_modules\kramed\lib\rules\inline.js文件"></a>2修改node_modules\kramed\lib\rules\inline.js文件</h2><p>hexo-renderer-marked渲染引擎仍然存在一些语义冲突问题，到博客的根目录下，找到node_modules\kramed\lib\rules\inline.js，把第11行的escape变量的值做相应的修改：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br></pre></td></tr></table></figure><p>这一步是在原基础上取消了对\,{,}的转义(escape)。</p><p>同时把第20行的em变量也要做相应的修改。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure><h2 id="3在主题中开启mathjax开关"><a href="#3在主题中开启mathjax开关" class="headerlink" title="3在主题中开启mathjax开关"></a>3在主题中开启mathjax开关</h2><p>到博客根目录下，找到themes/next/_config.yml，把math默认的flase修改为true，具体如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> Math Equations Render Support</span><br><span class="line">math:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br><span class="line">  engine: mathjax</span><br></pre></td></tr></table></figure><h2 id="4在文章的Front-matter里打开mathjax开关"><a href="#4在文章的Front-matter里打开mathjax开关" class="headerlink" title="4在文章的Front-matter里打开mathjax开关"></a>4在文章的Front-matter里打开mathjax开关</h2><p>如果你写的文章里面用到了数学公式，需要在文章Front-matter里打开mathjax开关。如果用不到数学公式，则不需要管它。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: index.html</span><br><span class="line">date: 2018-12-5 01:30:30</span><br><span class="line">tags:</span><br><span class="line">mathjax: true</span><br><span class="line">--</span><br></pre></td></tr></table></figure><h2 id="5重启hexo"><a href="#5重启hexo" class="headerlink" title="5重启hexo"></a>5重启hexo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #清除缓存文件</span><br><span class="line">hexo g -d  #生成并部署hexo</span><br></pre></td></tr></table></figure><p>到这里，hexo中无法显示数学公式的问题就得到解决了！</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="https://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">在Hexo中渲染MathJax数学公式</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> mathjax </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>体验活动的生命周期</title>
       <link href="/2018/11/16/%E4%BD%93%E9%AA%8C%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
       <url>/2018/11/16/%E4%BD%93%E9%AA%8C%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
