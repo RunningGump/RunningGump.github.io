@@ -116,13 +116,13 @@
 <meta property="og:site_name" content="初心">
 <meta property="og:description" content="前言和同学一起参加这个比赛，由于报名比较晚了加之第一次参加这种数据分析的比赛经验欠缺，导致最终取得的成绩不是很好。不过，在这次比赛中的确收获了很多，使我对数据分析的整个流程有了更清楚的认识。比赛已经结束后，对这个比赛做一个总结，以及对代码作出改进。改进后的模型使得预测结果在A榜达到了第3名。 数据集和代码见github 赛题本次比赛数据为某地4个月的房屋租赁价格以及房屋的基本信息，官方对数据进行了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/01/13/住房月租金预测大数据赛总结/Users/geng/Projects/RunningGump.github.io/source/_posts/住房月租金预测大数据赛总结/before.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/13/住房月租金预测大数据赛总结/Users/geng/Projects/RunningGump.github.io/source/_posts/住房月租金预测大数据赛总结/after.png">
-<meta property="og:updated_time" content="2019-01-13T10:29:04.084Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/13/住房月租金预测大数据赛总结/before.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/13/住房月租金预测大数据赛总结/after.png">
+<meta property="og:updated_time" content="2019-01-13T10:43:32.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="住房月租金预测大数据赛总结">
 <meta name="twitter:description" content="前言和同学一起参加这个比赛，由于报名比较晚了加之第一次参加这种数据分析的比赛经验欠缺，导致最终取得的成绩不是很好。不过，在这次比赛中的确收获了很多，使我对数据分析的整个流程有了更清楚的认识。比赛已经结束后，对这个比赛做一个总结，以及对代码作出改进。改进后的模型使得预测结果在A榜达到了第3名。 数据集和代码见github 赛题本次比赛数据为某地4个月的房屋租赁价格以及房屋的基本信息，官方对数据进行了">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/13/住房月租金预测大数据赛总结/Users/geng/Projects/RunningGump.github.io/source/_posts/住房月租金预测大数据赛总结/before.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/13/住房月租金预测大数据赛总结/before.png">
 
 
 
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-01-13 18:24:34 / 修改时间：18:29:04" itemprop="dateCreated datePublished" datetime="2019-01-13T18:24:34+08:00">2019-01-13</time>
+              <time title="创建时间：2019-01-13 18:24:34 / 修改时间：18:43:32" itemprop="dateCreated datePublished" datetime="2019-01-13T18:24:34+08:00">2019-01-13</time>
             
 
             
@@ -535,11 +535,11 @@
 </div>
 <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>本文的讲解主要从以下几个方面展开：<strong>数据清洗</strong>、<strong>特征构建</strong>、<strong>模型训练</strong>、<strong>模型融合</strong>。通过参加这次比赛，我认识到了<strong>特征工程</strong>在整个数据分析过程占据着举足轻重的地位，此处只列出能够提升模型性能的特征，其他测试特征见我的github。</p>
 <h1 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h1><p>画出房屋面积与月租金关系的散点图如下：</p>
-<p><img src="/2019/01/13/住房月租金预测大数据赛总结/Users/geng/Projects/RunningGump.github.io/source/_posts/住房月租金预测大数据赛总结/before.png" alt="image-20190112164608211"></p>
+<p><img src="/2019/01/13/住房月租金预测大数据赛总结/before.png" alt="image-20190112164608211"></p>
 <p>可以看到，房屋面积大于0.1的样本点属于异常值，将异常值去除。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 异常值清洗,上分</span></span><br><span class="line">train_df = train_df.drop(train_df[(train_df[<span class="string">'房屋面积'</span>]&gt;<span class="number">0.1</span>)].index)</span><br></pre></td></tr></table></figure>
 <p>异常值清除后，画出房屋面积与月租金关系的散点图如下：</p>
-<p><img src="/2019/01/13/住房月租金预测大数据赛总结/Users/geng/Projects/RunningGump.github.io/source/_posts/住房月租金预测大数据赛总结/after.png" alt="image-20190112164947005"></p>
+<p><img src="/2019/01/13/住房月租金预测大数据赛总结/after.png" alt="image-20190112164947005"></p>
 <p>经过测试，去除异常值能够提升模型性能。</p>
 <h1 id="特征构造"><a href="#特征构造" class="headerlink" title="特征构造"></a>特征构造</h1><p>我特征构造的思路是先根据常识来构造特征，比如：卧室&amp;厅&amp;卫总的房间数、卧室面积、厅的面积、卫的面积、房间相对高度等。然后，就是使用常用的套路来构造特征，比如：对类别型特征进行LabelEncoder编码、多个特征的线性组合、比例特征等等。<br>将使用原始特征求得的RMSE作为baseline，通过比较加入新构造特征后的RMSE与baseline的大小来筛选出有用的构造特征。</p>
 <h2 id="根据常识构造特征"><a href="#根据常识构造特征" class="headerlink" title="根据常识构造特征"></a>根据常识构造特征</h2><p>所谓根据常识构造特征就是我们根据现有的知识推断出哪些特征与月租金的相关性强。</p>
