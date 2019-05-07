@@ -3,7 +3,7 @@ title: Tmux的基本使用
 date: 2019-05-07 15:10:23
 categories: Tmux
 tags: 
-    Tmux 
+   - Tmux 
 ---
 
 # Tmux是什么
